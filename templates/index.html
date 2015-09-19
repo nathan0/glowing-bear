@@ -10,40 +10,40 @@
     <meta name="apple-mobile-web-app-title" content="Glowing Bear">
     <meta name="theme-color" content="#2779d3">
     <title ng-bind-template="{{ notificationStatus }}Glowing Bear {{ pageTitle}}"></title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="shortcut icon" sizes="128x128" href="assets/img/glowing_bear_128x128.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="assets/img/glowing_bear_128x128.png">
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" >
-    <link href="css/glowingbear.css" rel="stylesheet" media="screen">
-    <link href="css/themes/dark.css" rel="stylesheet" media="screen" id="themeCSS" />
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-sanitize.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-touch.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/emojione/1.4.0/lib/js/emojione.min.js"></script>
-    <script type="text/javascript" src="3rdparty/inflate.min.js"></script>
-    <script type="text/javascript" src="js/localstorage.js"></script>
-    <script type="text/javascript" src="js/weechat.js"></script>
-    <script type="text/javascript" src="js/irc-utils.js"></script>
-    <script type="text/javascript" src="js/glowingbear.js"></script>
-    <script type="text/javascript" src="js/settings.js"></script>
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/notifications.js"></script>
-    <script type="text/javascript" src="js/filters.js"></script>
-    <script type="text/javascript" src="js/handlers.js"></script>
-    <script type="text/javascript" src="js/connection.js"></script>
-    <script type="text/javascript" src="js/inputbar.js"></script>
-    <script type="text/javascript" src="js/plugin-directive.js"></script>
-    <script type="text/javascript" src="js/websockets.js"></script>
-    <script type="text/javascript" src="js/models.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="3rdparty/favico-0.3.5.min.js"></script>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" sizes="128x128" href="static/assets/img/glowing_bear_128x128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="static/assets/img/glowing_bear_128x128.png">
+    <link rel="shortcut icon" type="image/png" href="static/assets/img/favicon.png" >
+    <link href="static/css/glowingbear.css" rel="stylesheet" media="screen">
+    <link href="static/css/themes/dark.css" rel="stylesheet" media="screen" id="themeCSS" />
+    <script src="static/js/angular.min.js"></script>
+    <script src="static/js/angular-route.min.js"></script>
+    <script src="static/js/angular-sanitize.min.js"></script>
+    <script src="static/js/angular-touch.min.js"></script>
+    <script src="static/js/underscore-min.js"></script>
+    <script src="static/js/emojione.min.js"></script>
+    <script type="text/javascript" src="static/3rdparty/inflate.min.js"></script>
+    <script type="text/javascript" src="static/js/localstorage.js"></script>
+    <script type="text/javascript" src="static/js/weechat.js"></script>
+    <script type="text/javascript" src="static/js/irc-utils.js"></script>
+    <script type="text/javascript" src="static/js/glowingbear.js"></script>
+    <script type="text/javascript" src="static/js/settings.js"></script>
+    <script type="text/javascript" src="static/js/utils.js"></script>
+    <script type="text/javascript" src="static/js/notifications.js"></script>
+    <script type="text/javascript" src="static/js/filters.js"></script>
+    <script type="text/javascript" src="static/js/handlers.js"></script>
+    <script type="text/javascript" src="static/js/connection.js"></script>
+    <script type="text/javascript" src="static/js/inputbar.js"></script>
+    <script type="text/javascript" src="static/js/plugin-directive.js"></script>
+    <script type="text/javascript" src="static/js/websockets.js"></script>
+    <script type="text/javascript" src="static/js/models.js"></script>
+    <script type="text/javascript" src="static/js/plugins.js"></script>
+    <script type="text/javascript" src="static/3rdparty/favico-0.3.5.min.js"></script>
   </head>
-  <body ng-controller="WeechatCtrl" ng-keydown="handleKeyPress($event)" ng-keyup="handleKeyRelease($event)"  ng-keypress="handleKeyPress($event)" ng-class="{'no-overflow': connected}" ng-init="init()" lang="en-US">
+  <body ng-controller="WeechatCtrl" ng-keydown="handleKeyPress($$event)" ng-keyup="handleKeyRelease($$event)"  ng-keypress="handleKeyPress($$event)" ng-class="{'no-overflow': connected}" ng-init="init()" lang="en-US">
     <div ng-hide="connected" class="container">
       <h2>
-        <img alt="logo" src="assets/img/glowing-bear.svg">
+        <img alt="logo" src="static/assets/img/glowing-bear.svg">
         <span>Glowing Bear</span>
         <small>WeeChat web frontend</small>
       </h2>
@@ -60,7 +60,7 @@
         <div class="panel" data-state="active">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" ng-click="toggleAccordion($event)">
+              <a class="accordion-toggle" ng-click="toggleAccordion($$event)">
                 Connection settings
               </a>
             </h4>
@@ -113,7 +113,7 @@
         <div class="panel" data-state="collapsed">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" ng-click="toggleAccordion($event)">
+              <a class="accordion-toggle" ng-click="toggleAccordion($$event)">
                 Usage instructions
               </a>
             </h4>
@@ -151,7 +151,7 @@
         <div class="panel" data-state="collapsed">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" ng-click="toggleAccordion($event)">
+              <a class="accordion-toggle" ng-click="toggleAccordion($$event)">
                 Encryption instructions
               </a>
             </h4>
@@ -162,9 +162,9 @@
               <p><strong>Note</strong>: If you are using a self-signed certificate, you have to visit <a href="https://{{ settings.host }}:{{ settings.port }}/weechat">https://{{ settings.host || 'weechathost' }}:{{ settings.port || 'relayport' }}/weechat</a> in your browser first to add a security exception. You can close that tab once you confirmed the certificate, no content will appear. The necessity of this process is a bug in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=594502">Firefox</a> and other browsers.</p>
               <p><strong>Setup</strong>: If you want to use an encrypted session you first have to set up the relay to use TLS. You basically have two options: a self-signed certificate is easier to set up, but requires manual security exceptions. Using a certificate that is trusted by your browser requires more setup, but offers greater convenience later on and does not require security exceptions. You can find a guide to set up WeeChat with a free trusted certificate from StartSSL <a href="https://4z2.de/2014/07/06/weechat-trusted-relay">here</a>. Should you wish to use a self-signed certificate instead, execute the following commands in a shell on the same host and as the user running WeeChat:</p>
 <pre>
-$ mkdir -p ~/.weechat/ssl
-$ cd ~/.weechat/ssl
-$ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out relay.pem -subj "/CN={{settings.host || 'your weechat host'}}/"
+$$ mkdir -p ~/.weechat/ssl
+$$ cd ~/.weechat/ssl
+$$ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out relay.pem -subj "/CN={{settings.host || 'your weechat host'}}/"
 </pre>
               <p>If WeeChat is already running, you can reload the certificate and private key and set up an encrypted relay on port {{ settings.port || 9001 }} with these WeeChat commands:</p>
 <pre>
@@ -178,7 +178,7 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
         <div class="panel" data-state="collapsed" ng-hide="isinstalled">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" ng-click="toggleAccordion($event)">
+              <a class="accordion-toggle" ng-click="toggleAccordion($$event)">
                 Install app
               </a>
             </h4>
@@ -201,7 +201,7 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
         <div class="panel" data-state="collapsed">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle" ng-click="toggleAccordion($event)">
+              <a class="accordion-toggle" ng-click="toggleAccordion($$event)">
                 Get involved
               </a>
             </h4>
@@ -219,7 +219,7 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
       <div id="topbar">
         <div class="brand">
           <a href="#" ng-click="toggleSidebar()">
-            <img alt="brand" src="assets/img/favicon.png" title="Connected to {{ settings.host }}:{{ settings.port}}">
+            <img alt="brand" src="/static/assets/img/favicon.png" title="Connected to {{ settings.host }}:{{ settings.port}}">
           </a>
           <span class="badge" ng-show="unread > 0">{{unread}}</span>
           <span class="badge danger" ng-show="notifications > 0">{{notifications}}</span>
@@ -245,13 +245,13 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
         <ul class="nav nav-pills nav-stacked" ng-class="{'indented': (predicate === 'serverSortKey'), 'showquickkeys': showQuickKeys}">
           <li class="bufferfilter">
             <form role="form">
-              <input class="form-control favorite-font" type="text" id="bufferFilter" ng-model="search" ng-keydown="handleSearchBoxKey($event)" placeholder="Search" autocomplete="off">
+              <input class="form-control favorite-font" type="text" id="bufferFilter" ng-model="search" ng-keydown="handleSearchBoxKey($$event)" placeholder="Search" autocomplete="off">
             </form>
           </li>
           <li class="buffer" ng-class="{'active': buffer.active, 'indent': buffer.indent, 'channel': buffer.type === 'channel', 'channel_hash': buffer.prefix === '#', 'channel_plus': buffer.prefix === '+', 'channel_ampersand': buffer.prefix === '&', 'private': buffer.type === 'private'}" ng-repeat="(key, buffer) in (filteredBuffers = (getBuffers() | toArray:'withidx' | filter:{fullName:search} | filter:hasUnread | orderBy:predicate | getBufferQuickKeys:this))">
             <a ng-click="setActiveBuffer(buffer.id)" title="{{ buffer.fullName }}">
               <span class="badge pull-right" ng-class="{'danger': buffer.notification}" ng-if="buffer.notification || buffer.unread" ng-bind="buffer.notification || buffer.unread"></span>
-              <span class="buffer-quick-key">{{ buffer.$quickKey }}</span>
+              <span class="buffer-quick-key">{{ buffer.$$quickKey }}</span>
               <span class="buffername">{{ buffer.trimmedName || buffer.fullName }}</span>
             </a>
           </li>
@@ -277,17 +277,17 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
           <tbody ng-repeat="bufferline in bufferlines">
             <tr class="bufferline">
               <td class="time">
-                <span class="date" ng-class="::{'repeated-time': bufferline.shortTime==bufferlines[$index-1].shortTime}">
+                <span class="date" ng-class="::{'repeated-time': bufferline.shortTime==bufferlines[$$index-1].shortTime}">
                   <span class="cof-chat_time cob-chat_time coa-chat_time" ng-bind="::(bufferline.date|date:'HH')"></span><span class="cof-chat_time_delimiters cob-chat_time_delimiters coa-chat_time_delimiters">:</span><span class="cof-chat_time cob-chat_time coa-chat_time" ng-bind="::(bufferline.date|date:'mm')"></span><span class="seconds"><span class="cof-chat_time_delimiters cob-chat_time_delimiters coa-chat_time_delimiters">:</span><span class="cof-chat_time cob-chat_time coa-chat_time" ng-bind="::(bufferline.date|date:'ss')"></span></span>
                 </span>
               </td>
               <td class="prefix"><a ng-click="addMention(bufferline.prefix)"><span class="hidden-bracket">&lt;</span><span ng-repeat="part in ::bufferline.prefix" ng-class="::part.classes" ng-bind="::part.text|prefixlimit:25"></span><span class="hidden-bracket">&gt;</span></a></td><!--
            --><td class="message"><!--
              --><div ng-repeat="metadata in ::bufferline.metadata" plugin data="::metadata"></div><!--
-             --><span ng-repeat="part in ::bufferline.content" class="text" ng-class="::part.classes.concat(['line-' + part.$$hashKey.replace(':','_')])" ng-bind-html="::part.text | linky:'_blank' | DOMfilter:'irclinky' | DOMfilter:'emojify':settings.enableJSEmoji | DOMfilter:'inlinecolour' | DOMfilter:'mathjax':('.line-' + part.$$hashKey.replace(':','_')):settings.enableMathjax"></span>
+             --><span ng-repeat="part in ::bufferline.content" class="text" ng-class="::part.classes.concat(['line-' + part.$$$$hashKey.replace(':','_')])" ng-bind-html="::part.text | linky:'_blank' | DOMfilter:'irclinky' | DOMfilter:'emojify':settings.enableJSEmoji | DOMfilter:'inlinecolour' | DOMfilter:'mathjax':('.line-' + part.$$$$hashKey.replace(':','_')):settings.enableMathjax"></span>
               </td>
             </tr>
-            <tr class="readmarker" ng-if="activeBuffer().lastSeen==$index">
+            <tr class="readmarker" ng-if="activeBuffer().lastSeen==$$index">
               <td colspan="3">
                 <hr id="readmarker">
               </td>
@@ -306,11 +306,11 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
         Reconnecting... <a class="btn btn-tiny" ng-click="reconnect()">Click to try to reconnect now</a>
     </div>
     <div id="settingsModal" class="gb-modal" data-state="hidden">
-      <div class="backdrop" ng-click="closeModal($event)"></div>
+      <div class="backdrop" ng-click="closeModal($$event)"></div>
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" ng-click="closeModal($event)" aria-hidden="true">&times;</button>
+            <button type="button" class="close" ng-click="closeModal($$event)" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Settings</h4>
             <p>Settings will be stored in your browser.</p>
           </div>
@@ -467,22 +467,22 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" ng-click="closeModal($event)">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="closeModal($$event)">Close</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     <div id="topicModal" class="gb-modal" data-state="hidden">
-      <div class="backdrop" ng-click="closeModal($event)"></div>
+      <div class="backdrop" ng-click="closeModal($$event)"></div>
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" ng-click="closeModal($event)" aria-hidden="true">&times;</button>
+            <button type="button" class="close" ng-click="closeModal($$event)" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Channel topic</h4>
             <p ng-repeat="part in activeBuffer().title" ng-class="::part.classes" ng-bind-html="::(part.text | linky:'_blank' | DOMfilter:'irclinky')"></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" ng-click="closeModal($event)">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="closeModal($$event)">Close</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

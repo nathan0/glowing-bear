@@ -9,7 +9,7 @@ weechat.directive('plugin', ['$rootScope', 'settings', function($rootScope, sett
      * Shows additional plugin content
      */
     return {
-        templateUrl: 'directives/plugin.html',
+        templateUrl: '/static/directives/plugin.html',
 
         scope: {
             plugin: '=data'

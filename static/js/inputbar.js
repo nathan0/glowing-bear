@@ -7,7 +7,7 @@ weechat.directive('inputBar', function() {
 
     return {
 
-        templateUrl: 'directives/input.html',
+        templateUrl: '/static/directives/input.html',
 
         scope: {
             inputId: '@inputId',

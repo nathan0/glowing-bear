@@ -424,7 +424,7 @@ weechat.controller('WeechatCtrl', ['$rootScope', '$scope', '$store', '$timeout',
         (function() {
             var elem = document.createElement("link");
             elem.rel = "stylesheet";
-            elem.href = "css/themes/" + theme + ".css";
+            elem.href = "/static/css/themes/" + theme + ".css";
             elem.media = "screen";
             elem.id = "themeCSS";
             document.getElementsByTagName("head")[0].appendChild(elem);

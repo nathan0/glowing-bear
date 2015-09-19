@@ -107,7 +107,7 @@ weechat.factory('notifications', ['$rootScope', '$log', 'models', 'settings', fu
 
         var notification = new Notification(title, {
             body: body,
-            icon: 'assets/img/favicon.png'
+            icon: '/static/assets/img/favicon.png'
         });
 
         // Save notification, so we can close all outstanding ones when disconnecting
@@ -136,7 +136,7 @@ weechat.factory('notifications', ['$rootScope', '$log', 'models', 'settings', fu
 
         if (settings.soundnotification) {
             // TODO fill in a sound file
-            var audioFile = "assets/audio/sonar";
+            var audioFile = "/static/assets/audio/sonar";
             var soundHTML = '<audio autoplay="autoplay"><source src="' + audioFile + '.ogg" type="audio/ogg" /><source src="' + audioFile + '.mp3" type="audio/mpeg" /></audio>';
             document.getElementById("soundNotification").innerHTML = soundHTML;
         }
