@@ -44,10 +44,10 @@ Here's a simple example using the python simple web server:
 ```bash
 git clone https://github.com/glowing-bear/glowing-bear
 cd glowing-bear
-python -m SimpleHTTPServer
+./server.py [port]
 ```
 
-Now you can point your browser to [http://localhost:8000](http://localhost:8000)!
+Now you can point your browser to [http://localhost:8080](http://localhost:8080)!
 
 Remember that **you don't need to host Glowing Bear yourself to use it**, you can just use [our hosted version](http://www.glowing-bear.org) powered by GitHub pages, and we'll take care of updates for you. Your browser connects to WeeChat directly, so it does not matter where Glowing Bear is hosted.
 
